@@ -7,10 +7,30 @@
 <body>
     <h1>Robot Dashboard</h1>
 
-    <div id="status">
-        Connecting...
-    </div>
-    <p id="odom">Waiting for odometry...</p>
+    <div class="dashboard">
+  <div class="card">
+    <h2>Connection</h2>
+    <p id="status">Connecting...</p>
+  </div>
+
+  <div class="card">
+    <h2>Position</h2>
+    <p>X: <span id="pos-x">-</span></p>
+    <p>Y: <span id="pos-y">-</span></p>
+  </div>
+
+  <div class="card">
+    <h2>Velocity</h2>
+    <p>Linear: <span id="linear-velocity">-</span></p>
+    <p>Angular: <span id="angular-velocity">-</span></p>
+  </div>
+
+  <div class="card">
+    <h2>Sensors</h2>
+    <p>LiDAR: <span id="lidar-status">Waiting...</span></p>
+    <p>IMU: <span id="imu-status">Waiting...</span></p>
+  </div>
+</div>
 
     <script src="https://cdn.jsdelivr.net/npm/roslib/build/roslib.min.js"></script>
     <script src="script.js"></script>
